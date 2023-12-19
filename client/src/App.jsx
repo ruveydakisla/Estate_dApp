@@ -1,15 +1,21 @@
-import { EthProvider } from "./contexts/EthContext";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { EthProvider } from './contexts/EthContext';
+import Index from './components/Pages/Index';
 
-import ContractBtns from "./components/Demo/ContractBtns";
+import SignUp from './components/Pages/SignUp';
 
 function App() {
   return (
     <EthProvider>
-      <div id="App">
-        <div className="container">
-          <ContractBtns/>
-        </div>
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          {/* Add more routes as needed */}
+          {/* For example: <Route path="/about" element={<About />} /> */}
+        </Routes>
+      </Router>
     </EthProvider>
   );
 }

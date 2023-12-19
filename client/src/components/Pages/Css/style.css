@@ -1,0 +1,150 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  width: 300px;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 2rem;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+.box {
+  height: 100px;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.box .nav-bar {
+  height: 42px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 1225px;
+}
+
+.box .services {
+  color: #686c75;
+  font-family: 'Cera Pro-Medium', Helvetica;
+  font-size: 16.7px;
+  font-weight: 500;
+  left: 936px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 10px;
+  width: 76px;
+}
+
+.box .spaces {
+  color: #686c75;
+  font-family: 'Cera Pro-Medium', Helvetica;
+  font-size: 16.7px;
+  font-weight: 500;
+  left: 1054px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 10px;
+  width: 60px;
+}
+
+.box .events {
+  color: #686c75;
+  font-family: 'Cera Pro-Medium', Helvetica;
+  font-size: 16.7px;
+  font-weight: 500;
+  left: 1155px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 10px;
+  width: 62px;
+}
+
+.box .navigation-options {
+  align-items: center;
+  display: inline-flex;
+  gap: 41.79px;
+  left: 0;
+  padding: 10.45px;
+  position: absolute;
+  top: 0;
+}
+
+.box .home {
+  color: #686c75;
+  font-family: 'Cera Pro-Medium', Helvetica;
+  font-size: 16.7px;
+  font-weight: 500;
+  height: 20.89px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.04px;
+  position: relative;
+  width: 48.06px;
+}
+
+.box .about {
+  color: #686c75;
+  font-family: 'Cera Pro-Medium', Helvetica;
+  font-size: 16.7px;
+  font-weight: 500;
+  height: 20.89px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.04px;
+  position: relative;
+  width: 56.42px;
+}
+.box .text-wrapper {
+  color: #ffffff;
+  font-family: 'Cera Pro-Medium', Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  height: 20.89px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.04px;
+  position: relative;
+  width: 76.27px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
