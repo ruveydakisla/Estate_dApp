@@ -10,13 +10,13 @@ function EthProvider({ children }) {
     async artifact => {
       if (artifact) {
         const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
-        const accounts = await web3.eth.requestAccounts();
-        const networkID = await web3.eth.net.getId();
+        const accounts = await web3.eth.getAccounts();
+        const networkID = '11155111';
         const { abi } = artifact;
         let address, contract;
         try {
           address = artifact.networks[networkID].address;
-          contract = new web3.eth.Contract(abi, address);
+          contract = new web3.eth.Contract(abi, "0x7b9d130a56D6de5EF59f51306f9605fb054F00Ac");
         } catch (err) {
           console.error(err);
         }
