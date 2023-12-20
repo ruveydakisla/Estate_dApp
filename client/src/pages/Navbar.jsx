@@ -1,13 +1,13 @@
 import React from "react";
 import { Link, NavLink,BrowserRouter as Router} from "react-router-dom";
-
+import './Css/navbar.css';
 const Navbar = () => {
   return (
-    <Router>
+    
     <nav>
       <ul>
         <li>
-          <Link to="/">Anasayfa</Link>
+          <Link to="/" >Anasayfa</Link>
         </li>
         <li>
           <Link to="/about">Hakkımızda</Link>
@@ -27,7 +27,7 @@ const Navbar = () => {
         </li>
       </ul>
     </nav>
-    </Router>
+    
   );
 };
 

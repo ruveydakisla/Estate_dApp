@@ -5,9 +5,9 @@ import Navbar from './Navbar';
 export default function Index() {
   return (
     <div>
-      <div>
+      {/* <div>
         <Navbar />
-      </div>
+      </div> */}
       <div className="welcome-container">
         <header className="welcome-header">
           <h1>Hoş Geldiniz!</h1>
