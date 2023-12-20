@@ -11,10 +11,6 @@ export default function SignIn() {
     const result = await contract.methods.login().send({ from: accounts[0] });
     console.log(result);
   };
-  const login = async () => {
-    const result = await contract.methods.login().send({ from: accounts[0] });
-    console.log(result);
-  };
 
   return (
     <div className="sign-In">
