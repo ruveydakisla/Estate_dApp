@@ -10,8 +10,8 @@ const SignUp = () => {
   } = useEth();
 
   const register = async () => {
-    const result = await contract.methods
-      .register(username, 0)
+    const result=await contract.methods
+      .register(username,1)
       .send({ from: accounts[0] });
     console.log(result);
   };
@@ -43,7 +43,10 @@ const SignUp = () => {
             </select>
           </div>
 
-          <button onClick={register}>Sign Up</button>
+            <button className='btn-signUp' onClick={register}>
+               Sign Up
+            </button>
+         
         </div>
       </div>
     </div>

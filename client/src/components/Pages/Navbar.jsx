@@ -16,7 +16,7 @@ const Navbar = () => {
           <Link to="/tenantAdd">Tenant Add</Link>
           <Link to="/tenantSell">Tenant Sell</Link>
           <Link to="/signIn">Sign In</Link>
-          <Link to="/SignUp">Sign Up</Link>
+          <Link to="/signUp" >Sign Up</Link>
         </div>
       </div>
     </nav>
