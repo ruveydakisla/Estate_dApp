@@ -4,7 +4,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('../images/three.jpg'); /* Arka plan resminin dosya yolunu buraya ekleyin */
+  background-image: url('../images/eleven.jpg'); /* Arka plan resminin dosya yolunu buraya ekleyin */
   background-size: cover;
   background-position: center;
 }
@@ -14,9 +14,9 @@ body {
   margin: 13% auto;
   padding: 40px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.7); /* Şeffaf beyaz arka plan */
+  background-color: rgb(122, 255, 235, 0.3); /* Şeffaf beyaz arka plan */
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .welcome-header {

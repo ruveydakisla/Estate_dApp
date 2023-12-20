@@ -2,7 +2,7 @@
 
 .navbar {
   background-color: rgba(255, 255, 255, 0.4); /* %40 opak beyaz arka plan */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  box-shadow: 0 0 10px rgb(191, 184, 184);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   -webkit-transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -13,7 +13,7 @@
 
 .navbar:hover {
   background-color: #83a2ff; /* Hover olduğunda %10 opak beyaz arka plan */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
 
 .navbar-container {
