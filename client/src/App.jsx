@@ -5,15 +5,17 @@ import Index from './components/Pages/Index';
 
 import SignUp from './components/Pages/SignUp';
 import Navbar from '../src/components/Pages/Navbar';
+import PropertyAdd from './components/Pages/PropertyAdd';
 
 function App() {
   return (
     <EthProvider>
       <Router>
-        <Navbar/>
+        <Navbar />
         <Routes>
-          <Route  path="/"  element={<Index />} />
+          <Route path="/" element={<Index />} />
           <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/PropertyAdd" element={<PropertyAdd />} />
           {/* Add more routes as needed */}
           {/* For example: <Route path="/about" element={<About />} /> */}
         </Routes>

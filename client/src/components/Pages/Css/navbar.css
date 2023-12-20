@@ -12,7 +12,7 @@
 }
 
 .navbar:hover {
-  background-color: #83a2ff; /* Hover olduğunda %10 opak beyaz arka plan */
+  background-color: #a6ffdd; /* Hover olduğunda %10 opak beyaz arka plan */
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
 
