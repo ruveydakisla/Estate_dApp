@@ -12,7 +12,7 @@ const SignUp = () => {
 
   const register = async () => {
     const result=await contract.methods
-      .register(username,0)
+      .register(username,1)
       .send({ from: accounts[0] });
     console.log(result);
   };
@@ -53,7 +53,7 @@ const SignUp = () => {
               </select>
             </div>
 
-            <button  onClick={register}>
+            <button className='btn-signUp' onClick={register}>
                Sign Up
             </button>
          
