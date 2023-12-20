@@ -15,6 +15,8 @@ contract SimpleStorage{
         string name;
         address owner;
         string Address;
+        string imageAddress;
+        string propertyType;
     }
     /////////////////////////
      struct Lease {
@@ -36,6 +38,7 @@ contract SimpleStorage{
     mapping(address => Estate) public estates;
     Lease[] public leases;
     Complaint[] public complaints;
+    Estate[]  public properties;
 
     ///////////////////////////EVENTS/////////////////////////
     event LeaseCreated(address indexed tenant, address indexed property, uint256 startDate, uint256 endDate);
@@ -61,6 +64,7 @@ contract SimpleStorage{
         _;
     }
 
+
      
 
 
@@ -79,12 +83,19 @@ contract SimpleStorage{
     }
 
 
-    function addProperty(string memory _name,string memory _address) external {
+    function addProperty(string memory _name,string memory _address,string memory _imageAddress,string memory _propertyType) external {
         estates[msg.sender] = Estate({
             name: _name,
             owner: msg.sender,
-            Address:_address
+            Address:_address,
+            imageAddress:_imageAddress,
+            propertyType:_propertyType
         });
+        properties.push(estates[msg.sender]);
+
+    }
+    function getProperties() public view returns (Estate[] memory) {
+        return properties;
     }
 
      function createLease(address _property, uint256 _startDate, uint256 _endDate) external onlyTenant {

@@ -2,27 +2,54 @@
 
 import React, { useState } from 'react';
 import './Css/PropertyAdd.css';
-
+import { useEth } from '../../contexts/EthContext';
 export default function PropertyAdd() {
   const [propertyName, setPropertyName] = useState('');
   const [propertyAddress, setPropertyAddress] = useState('');
   const [propertyImage, setPropertyImage] = useState('');
+  const [propertyType, setPropertyType] = useState('');
 
-  const handlePropertySubmit = (e) => {
-    e.preventDefault();
-    // Burada form gönderme işlemlerini gerçekleştirebilirsiniz (örneğin, blockchain'e veri gönderme).
-    console.log('Gönderilen Mülk Bilgileri:', {
-      propertyName,
-      propertyAddress,
-      propertyImage,
-    });
+  const {
+    state: { contract, accounts },
+  } = useEth();
+
+  const addProperty = async () => {
+    await contract.methods
+      .addProperty(propertyName, propertyAddress, propertyImage,propertyType)
+      .send({ from: accounts[0] });
   };
+
+  const getEstates=async()=>{
+    const datas=await contract.methods.getProperties().call({from:accounts[0]});
+    convertObjects(datas);
+    console.log(propertyType);
+    
+    
+  }
+
+  const estates=[];
+  const convertObjects=(array)=>{
+
+    for(var i=0;i<array.length;i++){
+      const estate={
+        propertyName:array[i][0],
+        propertyOwner:array[i][1],
+        propertyAddress:array[i][2],
+        propertyImage:array[i][3],
+        propertyType:array[i][4]
+        
+      };
+      estates.push(estate);
+    }
+   
+  }
+
 
   return (
     <div className="container">
       <div className="PropertyAdd-container">
         <h1>Property Add</h1>
-        <form onSubmit={handlePropertySubmit}>
+        
           <div className="input-group">
             <label htmlFor="propertyName">Property Name:</label>
             <input
@@ -56,16 +83,21 @@ export default function PropertyAdd() {
               required
             />
           </div>
-          <div className="input-group">
+          <div className="input-group" >
             <label htmlFor="propertyType">Property Type:</label>
-            <select id="propertyType" name="propertyType" required>
+            <select onChange={(e)=>setPropertyType(e)} value={propertyType} id="propertyType" name="propertyType" required>
               <option value="apartment">Apartment</option>
               <option value="house">House</option>
               <option value="office">Office</option>
             </select>
           </div>
-          <button type="submit">Add Property</button>
-        </form>
+          <button onClick={addProperty}>Add Property</button>
+          <br />
+          <br />
+          <button onClick={getEstates}>get estates</button>
+        <div>
+          
+        </div>
       </div>
     </div>
   );

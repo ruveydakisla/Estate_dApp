@@ -1,12 +1,20 @@
 import React from 'react';
 import './Css/style.css';
-import './images/icons8-metamask-logo-48.png';
+import { useEth } from '../../contexts/EthContext';
 export default function SignIn() {
+  const {
+    state: { contract, accounts },
+  } = useEth();
+
+  const login=async()=>{
+   const result= await contract.methods.login().send({from:accounts[0]});
+   console.log(result);
+  }
   return (
     <div className="sign-In">
       <div className="Selams">
         <div className="signup-container">
-          <button className="btn-signIn">
+          <button className="btn-signIn" onClick={login}>
             <div>
               <div className='txt-btn'>Sign In with Metamask</div>
               <div className="img-logo">
