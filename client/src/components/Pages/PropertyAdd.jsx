@@ -22,8 +22,7 @@ export default function PropertyAdd() {
   const getEstates=async()=>{
     const datas=await contract.methods.getProperties().call({from:accounts[0]});
     convertObjects(datas);
-    console.log(propertyType);
-    
+    console.log(estates);
     
   }
 
