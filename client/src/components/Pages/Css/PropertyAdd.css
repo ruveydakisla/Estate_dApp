@@ -1,9 +1,12 @@
-.Container {
+/* PropertyAdd.css */
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.signup-container {
+
+.PropertyAdd-container {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -11,7 +14,7 @@
   text-align: center;
   width: 80%; /* Örneğin, 80% olarak değiştirin veya istediğiniz genişliği belirtin */
   max-width: 800px; /* Örneğin, 800px olarak değiştirin veya istediğiniz genişliği belirtin */
-  margin: 13% auto;
+  margin: 7% auto;
   font-size: 16px;
   box-sizing: border-box;
   align-items: center;
@@ -25,8 +28,8 @@ h2 {
 
 form {
   display: flex;
-  flex-direction: column;
   width: 100%; /* Form genişliği 100% olarak ayarlandı */
+  flex-direction: column;
 }
 
 .input-group {
@@ -52,7 +55,7 @@ select {
   font-size: 18px;
 }
 
-.btn-signUp {
+button {
   background-color: #007bff;
   color: #fff;
   padding: 10px;
@@ -63,3 +66,8 @@ select {
   transition: transform 0.3s ease, font-size 0.3s ease;
 }
 
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  font-size: 20px;
+}
