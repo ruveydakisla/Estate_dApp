@@ -1,0 +1,5 @@
+.body {
+  background-image: url('../src/components/Pages/images/eleven.jpg'); /* Arka plan resminin dosya yolunu buraya ekleyin */
+  background-size: cover;
+  background-position: center;
+}

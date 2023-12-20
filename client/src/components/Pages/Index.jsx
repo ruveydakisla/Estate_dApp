@@ -1,6 +1,5 @@
 import React from 'react';
 import './Css/index.css';
-import Navbar from './Navbar';
 
 export default function Index() {
   return (
