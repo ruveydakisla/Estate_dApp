@@ -1,0 +1,61 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.4); /* %40 opak beyaz arka plan */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  -webkit-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  -moz-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  -ms-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  -o-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: #83a2ff; /* Hover olduğunda %10 opak beyaz arka plan */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.navbar-logo {
+  font-size: 2.5rem;
+  color: #200e3a;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-links a {
+  color: #200e3a;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease, font-size 0.3s ease;
+  cursor: pointer; /* Üzerine gelince cursor tipi */
+}
+
+.navbar-links a:hover {
+  font-size: 2rem;
+}
+
+.navbar-links a:hover,
+.navbar-links a:focus {
+  border-bottom: 2px solid #333;
+  border-radius: 50%;
+  outline: none; /* Odaklandığında varsayılan odak çerçevesini kaldırma */
+}
