@@ -27,7 +27,7 @@ const EstateList = () => {
     }
     return estatesArray;
   };
-
+  
   useEffect(() => {
     const getEstates = async () => {
       try {
@@ -77,6 +77,7 @@ const EstateList = () => {
       ))}
 
       {selectedEstate && (
+        
         <div className="estate-modal" onClick={closeEstateModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <h1>{selectedEstate.propertyName}</h1>
