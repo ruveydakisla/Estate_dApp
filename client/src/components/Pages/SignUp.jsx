@@ -1,7 +1,6 @@
 // SignUp.js
 import React, { useState } from 'react';
 import './Css/signUp.css';
-import Navbar from './Navbar';
 import { useEth } from '../../contexts/EthContext';
 const SignUp = () => {
   const [username, setUserName] = useState('');
