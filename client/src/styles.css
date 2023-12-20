@@ -1,5 +1,9 @@
-.body {
-  background-image: url('../src/components/Pages/images/eleven.jpg'); /* Arka plan resminin dosya yolunu buraya ekleyin */
+body {
+  background-image: url('../src/components/Pages/images/eleven.jpg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0; /* Varsayılan body margin'ini kaldırarak, container'ın tam genişlikte olmasını sağlar */
+  height: 100vh; /* Ekranın yüksekliği kadar arka plan görünsün */
 }
