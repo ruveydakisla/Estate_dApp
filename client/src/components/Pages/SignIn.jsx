@@ -2,7 +2,6 @@ import React from 'react';
 import './Css/signIn.css';
 import './images/icons8-metamask-logo-48.png';
 import { useEth } from '../../contexts/EthContext';
-
 export default function SignIn() {
   const {
     state: { contract, accounts },
@@ -12,6 +11,11 @@ export default function SignIn() {
     const result = await contract.methods.login().send({ from: accounts[0] });
     console.log(result);
   };
+  const login = async () => {
+    const result = await contract.methods.login().send({ from: accounts[0] });
+    console.log(result);
+  };
+
   return (
     <div className="sign-In">
       <div className="Selams">
