@@ -1,6 +1,6 @@
 import React from 'react';
 import './Css/style.css';
-import { useEth } from '../../contexts/EthContext';
+import './images/icons8-metamask-logo-48.png';
 export default function SignIn() {
   const {
     state: { contract, accounts },
@@ -16,7 +16,7 @@ export default function SignIn() {
         <div className="signup-container">
           <button className="btn-signIn" onClick={login}>
             <div>
-              <div className='txt-btn'>Sign In with Metamask</div>
+              <div className="txt-btn">Sign In with Metamask</div>
               <div className="img-logo">
                 <img
                   src="https://cdn.iconscout.com/icon/free/png-512/free-metamask-2728406-2261817.png?f=webp&w=512"

@@ -11,7 +11,7 @@
   text-align: center;
   width: 80%; /* Örneğin, 80% olarak değiştirin veya istediğiniz genişliği belirtin */
   max-width: 800px; /* Örneğin, 800px olarak değiştirin veya istediğiniz genişliği belirtin */
-  margin: 13% auto;
+  margin: 12.9% auto;
   font-size: 16px;
   box-sizing: border-box;
   align-items: center;
@@ -62,4 +62,3 @@ select {
   cursor: pointer;
   transition: transform 0.3s ease, font-size 0.3s ease;
 }
-
