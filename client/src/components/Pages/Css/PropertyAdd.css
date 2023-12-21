@@ -65,7 +65,20 @@ button {
   cursor: pointer;
   transition: transform 0.3s ease, font-size 0.3s ease;
 }
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Araya boşluk eklemek için */
+}
 
+.button-group button {
+  width: 48%; /* Butonların yarı-genişlikte olması için */
+}
+
+.button-group button:hover {
+  transform: scale(1.05);
+  font-size: 20px;
+}
 button:hover {
   background-color: #0056b3;
   transform: scale(1.05);

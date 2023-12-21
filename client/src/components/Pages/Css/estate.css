@@ -15,8 +15,9 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  overflow: hidden; /* Yatay taşmaları önlemek için */
-  min-width: 600px; /* Minimum genişlik değeri */
+  overflow: hidden;
+  min-width: 600px;
+  z-index: 1; /* Container'ın z-index değeri */
 }
 
 .estate-container:hover {
@@ -40,17 +41,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000; /* Modal'ın z-index değeri */
 }
 
 .modal-content {
   background-color: #a6d0e2;
   padding: 20px;
   border-radius: 8px;
-  max-width: 70%;
+  max-width: 80%; /* Genişliği artırıldı */
+  min-width: 800px; /* Minimum genişlik eklendi */
   overflow: hidden;
   text-align: center;
+  z-index: 1001; /* Modal içeriğinin z-index değeri (modal'dan bir üstte olmalı) */
 }
-
 .estate-modal h1,
 .estate-modal p {
   margin-bottom: 10px;
@@ -61,13 +64,47 @@
   margin-left: 15px;
 }
 
-/* Eklenen kısım */
 h1 {
   font-size: 2rem;
 }
+
 p {
-  font-size: 1.2rem; /* Sabit font boyutu */
-  white-space: nowrap; /* Metni bir satırda tutar */
-  overflow: hidden; /* Taşan kısmı gizler */
-  text-overflow: ellipsis; /* Taşan kısmın yerine üç nokta ekler */
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Yeni form özelliklerine ait stiller */
+form {
+  margin-top: 20px;
+}
+
+.form-label {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #3b5998;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #2d4373;
+}
+label {
+  font-size: 20px;
 }

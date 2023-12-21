@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa&family=Montserrat&family=Roboto:ital,wght@1,300&display=swap');
 body {
+  font-family: 'Changa', sans-serif;
   background-image: url('../src/components/Pages/images/eleven.jpg');
   background-size: cover;
   background-position: center;

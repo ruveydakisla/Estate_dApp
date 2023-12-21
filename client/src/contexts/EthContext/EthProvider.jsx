@@ -17,7 +17,7 @@ function EthProvider({ children }) {
         address = artifact.networks[networkID].address;
         contract = new web3.eth.Contract(
           abi,
-          '0x4521935c202388A8bbc6Ba84f56F2C06977F3E6c'
+          '0xC9d6CdBf913f4965aDf143346cD92bf82bcbfE52'
         );
       } catch (err) {
         console.error(err);

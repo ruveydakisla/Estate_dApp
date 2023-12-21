@@ -8,6 +8,7 @@ export default function SignIn() {
   } = useEth();
 
   const login = async () => {
+    await window.ethereum.enable(); //metamask ekranı geliyor.
     const result = await contract.methods.login().send({ from: accounts[0] });
     console.log(result);
   };
