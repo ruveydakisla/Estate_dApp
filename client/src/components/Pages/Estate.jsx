@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { Container, Image } from 'react-bootstrap';
 import './Css/Estate.css';
 import { useEth } from '../../contexts/EthContext';
-import { Label } from 'reactstrap';
 
 const EstateList = () => {
   const [estates, setEstates] = useState([]);
@@ -16,6 +15,9 @@ const EstateList = () => {
     endDate: '',
   });
 
+  const [address,setAddress]=useState("");
+  const [startDate,setStartDate]=useState();
+  const [endDate,setEndDate]=useState();
   const {
     state: { contract, accounts },
   } = useEth();
@@ -60,13 +62,7 @@ const EstateList = () => {
     setSelectedEstate(null);
   };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  
 
   const submitForm = async () => {
     try {
@@ -79,6 +75,10 @@ const EstateList = () => {
       console.error('Error submitting form:', error);
     }
   };
+
+  const createLease=async()=>{
+    await contract.methods.createLease(address,startDate,endDate).send({from:accounts[0]});
+  }
 
   return (
     <Container className="estate-list-container">
@@ -123,17 +123,7 @@ const EstateList = () => {
             {/* Yeni form özellikleri */}
             <form>
               <h2>Kontrakt Oluştur</h2> {/* Yeni başlık eklendi */}
-              <div className="mb-3">
-                <label htmlFor="tenant">Kiracı:</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="tenant"
-                  name="tenant"
-                  value={formData.tenant}
-                  onChange={handleInputChange}
-                />
-              </div>
+              
               <div className="mb-3">
                 <label htmlFor="property">Mülk:</label>
                 <input
@@ -141,8 +131,8 @@ const EstateList = () => {
                   className="form-control"
                   id="property"
                   name="property"
-                  value={formData.property}
-                  onChange={handleInputChange}
+                  value={address}
+                  onChange={(t)=>setAddress(t.target.value)}
                 />
               </div>
               <div className="mb-3">
@@ -152,25 +142,25 @@ const EstateList = () => {
                   className="form-control"
                   id="startDate"
                   name="startDate"
-                  value={formData.startDate}
-                  onChange={handleInputChange}
+                  value={startDate}
+                  onChange={(t)=>setStartDate(t.target.value)}
                 />
               </div>
               <div className="mb-3">
                 <label htmlFor="endDate">Bitiş Tarihi:</label>
                 <input
-                  type="text"
+                  type="text" 
                   className="form-control"
                   id="endDate"
                   name="endDate"
-                  value={formData.endDate}
-                  onChange={handleInputChange}
+                  value={endDate}
+                  onChange={(t)=>setEndDate(t.target.value)}
                 />
               </div>
               <button
                 type="button"
                 className="btn btn-primary"
-                onClick={submitForm}
+                onClick={createLease}
               >
                 Kontrakt Oluştur {/* Buton metni güncellendi */}
               </button>

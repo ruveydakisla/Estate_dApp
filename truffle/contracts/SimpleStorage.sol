@@ -105,7 +105,12 @@ contract SimpleStorage{
         return properties;
     }
 
-     function createLease(address _property, uint256 _startDate, uint256 _endDate) external onlyTenant {
+     function getLeases() public view returns (Lease[] memory) {
+        return leases;
+    }
+
+
+     function createLease(address _property, uint256 _startDate, uint256 _endDate) external  {
         Lease memory newLease = Lease({
             tenant: msg.sender,
             property: _property,
@@ -147,7 +152,7 @@ contract SimpleStorage{
         }));
         emit ComplaintSubmitted(msg.sender, _description);
     }
-    function requestLease(address _property, uint256 _startDate, uint256 _endDate) external onlyTenant {
+    function requestLease(address _property, uint256 _startDate, uint256 _endDate) external {
         require(estates[_property].owner != address(0), "Property not found");
         emit LeaseRequest(msg.sender, _property, _startDate, _endDate);
     }
