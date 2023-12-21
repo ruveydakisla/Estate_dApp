@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import './Css/PropertyAdd.css';
 import { useEth } from '../../contexts/EthContext';
+
 export default function PropertyAdd() {
   const [propertyName, setPropertyName] = useState('');
   const [propertyAddress, setPropertyAddress] = useState('');
@@ -82,7 +83,7 @@ export default function PropertyAdd() {
         <div className="input-group">
           <label htmlFor="propertyType">Property Type:</label>
           <select
-            onChange={(e) => setPropertyType(e)}
+            onChange={(e) => setPropertyType(e.target.value)}
             value={propertyType}
             id="propertyType"
             name="propertyType"
@@ -93,11 +94,11 @@ export default function PropertyAdd() {
             <option value="office">Office</option>
           </select>
         </div>
-        <button onClick={addProperty}>Add Property</button>
-        <br />
-        <br />
-        <button onClick={getEstates}>get estates</button>
-        <div></div>
+
+        <div className="button-group">
+          <button onClick={addProperty}>Add Property</button>
+          <button onClick={getEstates}>Get Estates</button>
+        </div>
       </div>
     </div>
   );

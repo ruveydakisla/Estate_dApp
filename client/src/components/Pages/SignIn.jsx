@@ -11,10 +11,8 @@ export default function SignIn() {
     await window.ethereum.enable(); //metamask ekranı geliyor.
     const result = await contract.methods.login().send({ from: accounts[0] });
     console.log(result);
-    
   };
 
-  
   return (
     <div className="sign-In">
       <div className="Selams">
@@ -30,7 +28,6 @@ export default function SignIn() {
               </div>
             </div>
           </button>
-
         </div>
       </div>
     </div>

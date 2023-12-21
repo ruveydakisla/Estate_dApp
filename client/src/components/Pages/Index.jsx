@@ -19,9 +19,9 @@ export default function Index() {
           <h2>Proje Hakkında</h2>
           <p>
             Bu platform, MetaMask kullanarak Bitcoin adresi ile Ethereum
-            göndererek kiralama işlemlerini gerçekleştirmenize olanak tanır.
-            Kiracılar ve ev sahipleri arasında güvenilir ve şeffaf kiralama
-            sözleşmeleri oluşturabilirsiniz.
+            göndererek kiralama işlemlerini gerçekleştirmenize olanak <br />
+            tanır. Kiracılar ve ev sahipleri arasında güvenilir ve şeffaf
+            kiralama sözleşmeleri oluşturabilirsiniz.
           </p>
           {/* İhtiyacınıza göre daha fazla bilgi ekleyebilirsiniz */}
         </section>

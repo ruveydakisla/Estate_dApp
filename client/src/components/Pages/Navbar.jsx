@@ -22,15 +22,16 @@ const Navbar = () => {
       }
     };
 
-    getUserType();
-  }, [accounts, contract]);
+  //   getUserType();
+  // }, [accounts, contract]);
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="navbar-logo">Your Logo</div>
+        <div className="navbar-logo">GreenContract4go</div>
         <div className="navbar-links">
-          <Link to="/">index</Link>
+          <Link to="/">Home</Link>
+          <Link to="/Estate">Estate</Link>
 
           {/* Add the following condition to display or hide the "Property Add" link based on user type */}
           
