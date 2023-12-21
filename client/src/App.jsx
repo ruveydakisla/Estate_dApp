@@ -8,6 +8,7 @@ import PropertyAdd from './components/Pages/PropertyAdd';
 import SignIn from './components/Pages/SignIn';
 import Estate from './components/Pages/Estate';
 import './styles.css';
+import SignOut from './components/Pages/SignOut';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/PropertyAdd" element={<PropertyAdd />} />
           <Route path="/Estate" element={<Estate />} />
           <Route path="/signIn" element={<SignIn />} />
+          <Route path="/signOut" element={<SignOut />} />
           {/* Add more routes as needed */}
           {/* For example: <Route path="/about" element={<About />} /> */}
         </Routes>

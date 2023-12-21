@@ -9,6 +9,7 @@ contract SimpleStorage{
        address hashAdres;
        UserType userType;
        bool isRegistered;
+       bool isLogin;
     }
     //////////////////////////
     struct Estate{
@@ -69,17 +70,23 @@ contract SimpleStorage{
 
 
     function login() external {
+        users[msg.sender].isLogin=true;
         require(users[msg.sender].isRegistered, "User is not registered");
         emit UserLoggedIn(msg.sender);
     }
 
       function register(string memory _name, UserType _userType) external notRegisteredUser {
         users[msg.sender] = User({
+            isLogin:false,
             name:_name,
             userType: _userType,
             isRegistered: true,
             hashAdres:msg.sender
         });
+    }
+    function logout() external {
+        users[msg.sender].isLogin=false;
+        
     }
 
 
