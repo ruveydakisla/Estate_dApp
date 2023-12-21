@@ -9,6 +9,7 @@ import SignIn from './components/Pages/SignIn';
 import Estate from './components/Pages/Estate';
 import './styles.css';
 import SignOut from './components/Pages/SignOut';
+import MyContract from './components/Pages/MyContract';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/PropertyAdd" element={<PropertyAdd />} />
+          <Route path="/MyContract" element={<MyContract />} />
           <Route path="/Estate" element={<Estate />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/signOut" element={<SignOut />} />

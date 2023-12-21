@@ -16,7 +16,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   overflow: hidden;
-  min-width: 600px;
+  min-width: 800px;
   z-index: 1; /* Container'ın z-index değeri */
 }
 

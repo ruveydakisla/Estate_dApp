@@ -1,0 +1,43 @@
+/* MyContract.css */
+
+.my-contract-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contract-box {
+  background-color: #d7aaaa86;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Metinleri sola dayalı hale getirin */
+  width: 80%;
+  max-width: 800px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.contract-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-info {
+  flex: 1; /* Metin bilgileri için genişlik ayarla */
+}
+
+.image-container {
+  flex: 1; /* Resim için genişlik ayarla */
+  text-align: right; /* Resmi sağa dayalı hale getirin */
+}
+
+.contract-image {
+  max-width: 100%; /* Resmin maksimum genişliğini ayarla */
+  height: auto; /* Oranları koruyarak yüksekliği ayarla */
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; /* Üst kısmına 10 piksel boşluk ekle */
+  margin-left: 15px; /* Sol kısmına boşluk ekleme */
+}

@@ -32,19 +32,16 @@ const Navbar = () => {
         <div className="navbar-links">
           <Link to="/">Home</Link>
           <Link to="/Estate">Estate</Link>
+          <Link to="/MyContract">My Contract</Link>
 
           {/* Add the following condition to display or hide the "Property Add" link based on user type */}
-          
-              <Link to="/PropertyAdd">Property Add</Link>
-              <Link to="/Estate">Estate</Link>
-              <Link to="/signOut">signOut</Link>
-              
-           
-            
-              <Link to="/signIn">Sign In</Link>
-              <Link to="/signUp">Sign Up</Link>
-            
-          
+
+          <Link to="/PropertyAdd">Property Add</Link>
+
+          <Link to="/signOut">signOut</Link>
+
+          <Link to="/signIn">Sign In</Link>
+          <Link to="/signUp">Sign Up</Link>
         </div>
       </div>
     </nav>
