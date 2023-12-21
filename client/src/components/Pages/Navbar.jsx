@@ -22,8 +22,8 @@ const Navbar = () => {
       }
     };
 
-  //   getUserType();
-  // }, [accounts, contract]);
+    getUserType();
+  }, [accounts, contract]);
 
   return (
     <nav className="navbar">
